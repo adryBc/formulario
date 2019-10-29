@@ -11,25 +11,27 @@
     </h:head>
     <h:body>
         <form jsf:prependId="false">
-        <h1>Datos para recuperación </h1>
-        <h2>Ingresa los siguientes datos para saber de acuerdo al número de materias el pago que realizarás</h2>
+            <h1 align="center">Datos para recuperación: ingresa los datos siguientes para saber cúanto pagarás.</h1>
+            
         <h:messages globalOnly="true"/>
-        <p>Nombre   
+        <br/>
+        <br/>
+        <p style="padding-left: 90px">Nombre   
           <input jsf:id="nombre" type="text" placeholder="Nombre"
                  jsf:required="true" jsf:value="#{referencia.nombre}"/>
           <h:message for="nombre"/>
         </p>
-        <p>Grupo    
+        <p style="padding-left: 100px">Grupo    
           <input jsf:id="grupo" type="text" placeholder="grupo"
                  jsf:required="true" jsf:value="#{referencia.grupo}"/>
           <h:message for="grupo"/>
         </p>
-        <p>Num. de materias
+        <p style="padding-left: 30px">Num. de materias
           <input jsf:id="num_materias" type="text" placeholder="de 1 a 3 materias"
                  jsf:required="true" jsf:value="#{referencia.num_materias}"/>
           <h:message for="num_materias"/>
         </p>        
-        <p>
+        <p style="padding-left: 200px">
             <button jsf:action="#{referencia.pagos()}">Aceptar</button>
         </p>
     </form>
