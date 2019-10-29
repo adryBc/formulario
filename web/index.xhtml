@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <h:head>
+        <meta charset="utf-8"/>
+    <title>Formulario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    </h:head>
+    <h:body>
+        <form jsf:prependId="false">
+        <h1>Datos para recuperación </h1>
+        <h2>Ingresa los siguientes datos para saber de acuerdo al número de materias el pago que realizarás</h2>
+        <h:messages globalOnly="true"/>
+        <p>Nombre   
+          <input jsf:id="nombre" type="text" placeholder="Nombre"
+                 jsf:required="true" jsf:value="#{referencia.nombre}"/>
+          <h:message for="nombre"/>
+        </p>
+        <p>Grupo    
+          <input jsf:id="grupo" type="text" placeholder="grupo"
+                 jsf:required="true" jsf:value="#{referencia.grupo}"/>
+          <h:message for="grupo"/>
+        </p>
+        <p>Num. de materias
+          <input jsf:id="num_materias" type="text" placeholder="de 1 a 3 materias"
+                 jsf:required="true" jsf:value="#{referencia.num_materias}"/>
+          <h:message for="num_materias"/>
+        </p>        
+        <p>
+            <button jsf:action="#{referencia.pagos()}">Aceptar</button>
+        </p>
+    </form>
+        
+      
+    </h:body>
+</html>
+
